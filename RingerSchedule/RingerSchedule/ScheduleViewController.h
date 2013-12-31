@@ -16,4 +16,9 @@
 
 - (IBAction)tappedCancel:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UISlider *mySlider;
+
+ 
+@property (weak, nonatomic) IBOutlet UITableView *schedDataTableView;
+
 @end
