@@ -22,6 +22,7 @@
 		1A0F673F18296068002286CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A0F673D18296068002286CE /* InfoPlist.strings */; };
 		1A0F674118296068002286CE /* RingerScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F674018296068002286CE /* RingerScheduleTests.m */; };
 		1AFFECC61829635500F8D877 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFFECC51829635500F8D877 /* ScheduleViewController.m */; };
+		F3AEFBA418764A5600199541 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFBA318764A5600199541 /* RepeatViewController.m */; };
 		F3CFFCD918720C5700BAE946 /* audio_volume_high.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CFFCD818720C5700BAE946 /* audio_volume_high.png */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		1A0F674018296068002286CE /* RingerScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RingerScheduleTests.m; sourceTree = "<group>"; };
 		1AFFECC41829635500F8D877 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		1AFFECC51829635500F8D877 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		F3AEFBA218764A5600199541 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
+		F3AEFBA318764A5600199541 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
 		F3CFFCD818720C5700BAE946 /* audio_volume_high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = audio_volume_high.png; path = ../../../../Downloads/audio_volume_high.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +124,8 @@
 				1A0F672418296068002286CE /* AppDelegate.h */,
 				1A0F672518296068002286CE /* AppDelegate.m */,
 				1A0F672718296068002286CE /* Main.storyboard */,
+				F3AEFBA218764A5600199541 /* RepeatViewController.h */,
+				F3AEFBA318764A5600199541 /* RepeatViewController.m */,
 				1AFFECC41829635500F8D877 /* ScheduleViewController.h */,
 				1AFFECC51829635500F8D877 /* ScheduleViewController.m */,
 				1A0F672A18296068002286CE /* ViewController.h */,
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0F672C18296068002286CE /* ViewController.m in Sources */,
+				F3AEFBA418764A5600199541 /* RepeatViewController.m in Sources */,
 				1A0F672618296068002286CE /* AppDelegate.m in Sources */,
 				1A0F672218296068002286CE /* main.m in Sources */,
 				1AFFECC61829635500F8D877 /* ScheduleViewController.m in Sources */,

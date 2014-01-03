@@ -8,17 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 
 - (IBAction)tappedSubmit:(id)sender;
 
 - (IBAction)tappedDelete:(id)sender;
 
-- (IBAction)tappedCancel:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UISlider *mySlider;
-
- 
 @property (weak, nonatomic) IBOutlet UITableView *schedDataTableView;
 
 @end

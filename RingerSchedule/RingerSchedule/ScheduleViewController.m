@@ -51,11 +51,6 @@
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
-- (IBAction)tappedCancel:(id)sender {
-    
-    //If you push the view onto the navigation controller, you have to pop it from the stack.
-    [[self navigationController] popViewControllerAnimated:YES];
-}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -103,9 +98,8 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    
+
     return cell;
-    
     
 }
 

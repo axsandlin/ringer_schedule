@@ -10,10 +10,4 @@
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-
-
-- (IBAction)createSchedule:(id)sender;
-
-
-
 @end
