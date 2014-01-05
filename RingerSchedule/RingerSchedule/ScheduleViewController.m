@@ -7,6 +7,7 @@
 //
 
 #import "ScheduleViewController.h"
+#import "Schedule.h"
 
 @interface ScheduleViewController ()
 
@@ -28,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Schedule *mySchedule = [Schedule sharedSchedule];
     
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
