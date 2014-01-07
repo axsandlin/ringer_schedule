@@ -14,6 +14,8 @@
 
 @implementation RepeatViewController
 
+@synthesize delegate;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -79,6 +82,30 @@
     cell.textLabel.text = displayValue;
 
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *repeatValue;
+    
+    if (indexPath.row == 0) {
+        repeatValue = @"Every Day";
+        
+    } else if (indexPath.row == 1) {
+         repeatValue = @"Every Week";
+    }
+    else if (indexPath.row ==2) {
+         repeatValue = @"Every 2 Weeks";
+    }
+    else if (indexPath.row ==3) {
+         repeatValue =@"Every Week Day";
+    }
+    
+    [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
+
+    
+    [[self navigationController] popViewControllerAnimated:YES];
+
 }
 
 /*

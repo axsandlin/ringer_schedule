@@ -30,7 +30,6 @@
 {
     [super viewDidLoad];
     
-    Schedule *mySchedule = [Schedule sharedSchedule];
     
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
@@ -41,6 +40,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValue
+{
+ NSLog(@"This was returned from RepeatViewController %@",repeatValue);
 }
 
 - (IBAction)tappedSubmit:(id)sender {
@@ -54,6 +58,8 @@
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
+- (IBAction)tappedDone:(id)sender {
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -107,6 +113,15 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row ==7) {
+        
+        RepeatViewController *repeatViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"repeat"];
+        
+        repeatViewController.delegate = self;
+        
+        [[self navigationController] pushViewController:repeatViewController animated:YES];
+    }
     //the method is called when a row in the table has been tapped.  My app needs to display the schedule information in another view controller with an option to update or delete or cancel.
 }
 

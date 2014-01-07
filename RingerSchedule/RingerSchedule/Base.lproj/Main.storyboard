@@ -198,9 +198,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="NNN-PF-qcZ" kind="push" id="BXm-pV-gCm"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RingerVolume" id="BZO-YT-NW3">
                                         <rect key="frame" x="0.0" y="286" width="316" height="44"/>
@@ -253,7 +250,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title=" " id="dcW-y5-0Kz">
                         <barButtonItem key="backBarButtonItem" title="Edit Schedule" id="XWT-As-jgi"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="N0z-fd-1ds"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="N0z-fd-1ds">
+                            <connections>
+                                <action selector="tappedDone:" destination="2an-JX-0bz" id="n0S-Jr-bgR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -263,19 +264,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKm-Q4-FL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="144"/>
+            <point key="canvasLocation" x="942" y="102"/>
         </scene>
         <!--Repeat View Controller-->
         <scene sceneID="MRk-6y-EdF">
             <objects>
-                <tableViewController id="NNN-PF-qcZ" customClass="RepeatViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="repeat" id="NNN-PF-qcZ" customClass="RepeatViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="n0K-i2-ZD7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepeatCell" textLabel="1F1-T1-VeM" style="IBUITableViewCellStyleDefault" id="UH6-tF-abt">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UH6-tF-abt" id="fAV-Mf-31Q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
