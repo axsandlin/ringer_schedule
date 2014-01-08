@@ -16,7 +16,6 @@
 @implementation ScheduleViewController
 
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +44,7 @@
 -(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValue
 {
  NSLog(@"This was returned from RepeatViewController %@",repeatValue);
+
 }
 
 - (IBAction)tappedSubmit:(id)sender {
@@ -107,7 +107,8 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-
+    UILabel *ratingLabel = (UILabel *)[cell viewWithTag:4];
+    
     return cell;
     
 }
@@ -121,6 +122,8 @@
         repeatViewController.delegate = self;
         
         [[self navigationController] pushViewController:repeatViewController animated:YES];
+        
+
     }
     //the method is called when a row in the table has been tapped.  My app needs to display the schedule information in another view controller with an option to update or delete or cancel.
 }

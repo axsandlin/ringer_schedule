@@ -103,7 +103,6 @@
     
     [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
 
-    
     [[self navigationController] popViewControllerAnimated:YES];
 
 }
