@@ -107,7 +107,7 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    UILabel *ratingLabel = (UILabel *)[cell viewWithTag:4];
+   // UILabel *ratingLabel = (UILabel *)[cell viewWithTag:4];
     
     return cell;
     
