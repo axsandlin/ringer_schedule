@@ -62,10 +62,14 @@
     
     NSString *displayValue;
     
+    static NSString *CellIdentifier = @"RepeatCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     
     if (indexPath.row == 0) {
         displayValue = @"Never";
-        [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         
     }if (indexPath.row == 1) {
         displayValue = @"Every Day";
@@ -80,12 +84,8 @@
          displayValue =@"Every Week Day";
     }
 
-    static NSString *CellIdentifier = @"RepeatCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     cell.textLabel.text = displayValue;
-
+    
     return cell;
 }
 
