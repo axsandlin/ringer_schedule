@@ -15,7 +15,6 @@
 
 @implementation ScheduleViewController
 
-@synthesize repeatFlag;
 @synthesize schedDataTableView;
 @synthesize identifier;
 
@@ -31,9 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    repeatFlag = NO;
-    
+        
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
 }    // Do any additional setup after loading the view.
@@ -79,12 +76,6 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
-//    if (indexPath.row == 7 && repeatFlag == YES) {
-//        RepeatCell *myCell = (RepeatCell *) [tableView dequeueReusableCellWithIdentifier:identifier];
-//        cell.repeatLabel.text = repeatValue;
-//    }
     
     if (indexPath.row == 0) {
         identifier = @"ScheduleName";

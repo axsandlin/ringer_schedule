@@ -22,7 +22,6 @@
 - (IBAction)tappedDone:(id)sender;
 
 @property (nonatomic, weak) NSString *identifier;
-@property (assign, nonatomic) BOOL repeatFlag;
 
 @property (weak, nonatomic) IBOutlet UITableView *schedDataTableView;
 
