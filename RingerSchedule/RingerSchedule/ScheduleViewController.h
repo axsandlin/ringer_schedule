@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RepeatCell.h"
+#import "ScheduleNameCell.h"
 #import "RepeatViewController.h"
 
 
@@ -22,6 +23,7 @@
 - (IBAction)tappedDone:(id)sender;
 
 @property (nonatomic, weak) NSString *identifier;
+@property (nonatomic, weak) NSString *scheduleName;
 
 @property (weak, nonatomic) IBOutlet UITableView *schedDataTableView;
 

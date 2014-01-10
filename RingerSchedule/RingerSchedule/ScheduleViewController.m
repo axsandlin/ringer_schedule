@@ -17,6 +17,7 @@
 
 @synthesize schedDataTableView;
 @synthesize identifier;
+@synthesize scheduleName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +54,20 @@
     myCell.repeatLabel.text = repeatValueReturned;
 }
 
+//- (void) textFieldDidEndEditing:(UITextField *)textField {
+    
+//    ScheduleNameCell *mySchedCell = (ScheduleNameCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
+//        scheduleName = mySchedCell.txtScheduleName.text;
+//}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //hide the keyboard
+    [textField resignFirstResponder];
+    
+    //return NO or YES, it doesn't matter
+    return YES;
+}
 - (IBAction)tappedSubmit:(id)sender {
     
     //If you push the view onto the navigation controller, you have to pop it from the stack.
