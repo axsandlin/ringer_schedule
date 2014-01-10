@@ -15,6 +15,9 @@
 
 @implementation ScheduleViewController
 
+@synthesize repeatFlag;
+@synthesize schedDataTableView;
+@synthesize identifier;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +32,7 @@
 {
     [super viewDidLoad];
     
+    repeatFlag = NO;
     
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
@@ -41,10 +45,15 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValue
+-(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValueReturned
 {
- NSLog(@"This was returned from RepeatViewController %@",repeatValue);
-
+    
+ NSLog(@"This was returned from RepeatViewController %@",repeatValueReturned);
+    
+    //I cast the selected cell into my custom cell in order to access the label property/outlet and update the label.
+    
+    RepeatCell *myCell = (RepeatCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
+    myCell.repeatLabel.text = repeatValueReturned;
 }
 
 - (IBAction)tappedSubmit:(id)sender {
@@ -71,7 +80,12 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    NSString *identifier;
+    
+//    if (indexPath.row == 7 && repeatFlag == YES) {
+//        RepeatCell *myCell = (RepeatCell *) [tableView dequeueReusableCellWithIdentifier:identifier];
+//        cell.repeatLabel.text = repeatValue;
+//    }
+    
     if (indexPath.row == 0) {
         identifier = @"ScheduleName";
     } else if (indexPath.row == 1) {
@@ -104,13 +118,10 @@
     else if (indexPath.row ==10) {
         identifier =@"Slider";
     }
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-   // UILabel *ratingLabel = (UILabel *)[cell viewWithTag:4];
-    
     return cell;
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -24,6 +24,7 @@
 		1AFFECC61829635500F8D877 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFFECC51829635500F8D877 /* ScheduleViewController.m */; };
 		F3AEFBA418764A5600199541 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFBA318764A5600199541 /* RepeatViewController.m */; };
 		F3AEFBA718774E8600199541 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFBA618774E8600199541 /* Schedule.m */; };
+		F3E0D3A6187F25340006546F /* RepeatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E0D3A5187F25340006546F /* RepeatCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		F3AEFBA318764A5600199541 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
 		F3AEFBA518774E8600199541 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		F3AEFBA618774E8600199541 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		F3E0D3A4187F25340006546F /* RepeatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepeatCell.h; path = ../../../../Documents/RepeatCell.h; sourceTree = "<group>"; };
+		F3E0D3A5187F25340006546F /* RepeatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepeatCell.m; path = ../../../../Documents/RepeatCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				1A0F672718296068002286CE /* Main.storyboard */,
 				F3AEFBA218764A5600199541 /* RepeatViewController.h */,
 				F3AEFBA318764A5600199541 /* RepeatViewController.m */,
+				F3E0D3A4187F25340006546F /* RepeatCell.h */,
+				F3E0D3A5187F25340006546F /* RepeatCell.m */,
 				1AFFECC41829635500F8D877 /* ScheduleViewController.h */,
 				1AFFECC51829635500F8D877 /* ScheduleViewController.m */,
 				1A0F672A18296068002286CE /* ViewController.h */,
@@ -269,6 +274,7 @@
 				F3AEFBA418764A5600199541 /* RepeatViewController.m in Sources */,
 				1A0F672618296068002286CE /* AppDelegate.m in Sources */,
 				1A0F672218296068002286CE /* main.m in Sources */,
+				F3E0D3A6187F25340006546F /* RepeatCell.m in Sources */,
 				1AFFECC61829635500F8D877 /* ScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

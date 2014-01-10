@@ -13,7 +13,7 @@
 
 @protocol RepeatViewControllerDelegate <NSObject>
 
--(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValue;
+-(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValueReturned;
 
 @end
 
