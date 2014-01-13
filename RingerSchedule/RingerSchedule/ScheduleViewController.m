@@ -54,19 +54,45 @@
     myCell.repeatLabel.text = repeatValueReturned;
 }
 
-//- (void) textFieldDidEndEditing:(UITextField *)textField {
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    //Called when the user clicks inside the text field.
     
-//    ScheduleNameCell *mySchedCell = (ScheduleNameCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
-//        scheduleName = mySchedCell.txtScheduleName.text;
-//}
+    NSLog(@"Text field did begin editing");
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    //Called when return key (before textFieldShouldReturn) is hit and when user clicks on a Repeat cell (new view controller) I think because this is called only when resignFirstReponder is called.
+    
+    //If user enters no schedule name, then the the schedule name will be New Schedule.
+    
+    if ([textField.text isEqualToString:@""]) {
+        
+        scheduleName = @"New Schedule";
+    }
+    else if (![textField.text isEqualToString:@""]) {
+        
+        scheduleName = textField.text;
+    }
+    
+    NSLog(@"Text field ended editing");
 
+    NSLog(@"The value of the text field is %@", scheduleName);
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+//Called when the return key is hit.
 {
     //hide the keyboard
     [textField resignFirstResponder];
     
+    NSLog(@"Text Field Should Return Is Called");
+
+    
     //return NO or YES, it doesn't matter
     return YES;
+    
+    NSLog(@"Text Field Should Return Is Called");
+
 }
 - (IBAction)tappedSubmit:(id)sender {
     

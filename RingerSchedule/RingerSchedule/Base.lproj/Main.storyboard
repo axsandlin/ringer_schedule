@@ -111,7 +111,7 @@
                                                     <rect key="frame" x="17" y="7" width="287" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="2an-JX-0bz" id="BOd-IO-kbE"/>
                                                     </connections>
