@@ -10,13 +10,12 @@
 #import "RepeatCell.h"
 #import "ScheduleNameCell.h"
 #import "RepeatViewController.h"
+#import "DaysOfWeekViewController.h"
 
 
 
-@interface ScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate, RepeatViewControllerDelegate>
+@interface ScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate, RepeatViewControllerDelegate, DaysOfWeekViewControllerDelegate>
 
-
-- (IBAction)tappedSubmit:(id)sender;
 
 - (IBAction)tappedDelete:(id)sender;
 

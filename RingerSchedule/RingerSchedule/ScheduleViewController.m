@@ -45,6 +45,7 @@
 
 -(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValueReturned
 {
+
     
  NSLog(@"This was returned from RepeatViewController %@",repeatValueReturned);
     
@@ -52,6 +53,12 @@
     
     RepeatCell *myCell = (RepeatCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
     myCell.repeatLabel.text = repeatValueReturned;
+}
+
+-(void)getDaysOfWeek:(DaysOfWeekViewController *)daysOfWeekViewController didSelectDaysOfWeek:(NSString *)daysOfWeekReturned; {
+    
+    NSLog(@"getDaysOfWeek was called");
+
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -94,10 +101,6 @@
     NSLog(@"Text Field Should Return Is Called");
 
 }
-- (IBAction)tappedSubmit:(id)sender {
-    
-    //If you push the view onto the navigation controller, you have to pop it from the stack.
-    [[self navigationController] popViewControllerAnimated:YES];}
 
 - (IBAction)tappedDelete:(id)sender {
     
@@ -106,13 +109,16 @@
 }
 
 - (IBAction)tappedDone:(id)sender {
+    
+    [[self navigationController] popViewControllerAnimated:YES];
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 -(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-     return 11;
+     return 13;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -145,9 +151,15 @@
         identifier =@"Blank";
     }
     else if (indexPath.row ==9) {
-        identifier =@"RingerVolume";
+        identifier =@"DayOfWeek";
     }
     else if (indexPath.row ==10) {
+        identifier =@"Blank";
+    }
+    else if (indexPath.row ==11) {
+        identifier =@"RingerVolume";
+    }
+    else if (indexPath.row ==12) {
         identifier =@"Slider";
     }
     
@@ -165,10 +177,15 @@
         repeatViewController.delegate = self;
         
         [[self navigationController] pushViewController:repeatViewController animated:YES];
+    
+    }else if (indexPath.row == 9) {
         
-
-    }
-    //the method is called when a row in the table has been tapped.  My app needs to display the schedule information in another view controller with an option to update or delete or cancel.
+        DaysOfWeekViewController *daysOfWeekViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"daysOfWeek"];
+        
+        daysOfWeekViewController.delegate = self;
+        
+        [[self navigationController] pushViewController:daysOfWeekViewController animated:YES];    }
+    
 }
 
 @end
