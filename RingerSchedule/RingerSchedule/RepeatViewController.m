@@ -15,6 +15,7 @@
 @implementation RepeatViewController
 
 @synthesize delegate;
+@synthesize repeatValue;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -65,12 +66,11 @@
     static NSString *CellIdentifier = @"RepeatCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     
     if (indexPath.row == 0) {
         displayValue = @"Never";
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        
     }if (indexPath.row == 1) {
         displayValue = @"Every Day";
         
@@ -78,7 +78,7 @@
          displayValue = @"Every Week";
     }
     else if (indexPath.row ==3) {
-         displayValue = @"Every 2 Weeks";
+        displayValue = @"Every 2 Weeks";
     }
     else if (indexPath.row ==4) {
          displayValue =@"Every Week Day";
@@ -91,7 +91,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *repeatValue;
+    
+ //   UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+
     
     if (indexPath.row == 0) {
         repeatValue = @"Never";

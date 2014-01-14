@@ -48,22 +48,49 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    NSString *displayValue;
+    
+    static NSString *CellIdentifier = @"DayCell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    if (indexPath.row == 0) {
+        displayValue = @"Monday";
+        
+    }if (indexPath.row == 1) {
+        displayValue = @"Tuesday";
+        
+    } else if (indexPath.row == 2) {
+        displayValue = @"Wednesday";
+    }
+    else if (indexPath.row ==3) {
+        displayValue = @"Thursday";
+    }
+    else if (indexPath.row ==4) {
+        displayValue =@"Friday";
+    }
+    else if (indexPath.row ==5) {
+        displayValue =@"Saturday";
+    }
+    else if (indexPath.row ==6) {
+        displayValue =@"Sunday";
+    }
+
+    cell.textLabel.text = displayValue;
+
     
     return cell;
 }

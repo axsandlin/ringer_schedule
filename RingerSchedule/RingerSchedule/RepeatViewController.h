@@ -20,6 +20,7 @@
 @interface RepeatViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) id <RepeatViewControllerDelegate> delegate;
+@property (nonatomic, weak) NSString *repeatValue;
 
 @end
 
