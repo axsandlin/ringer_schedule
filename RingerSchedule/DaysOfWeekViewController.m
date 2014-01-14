@@ -95,6 +95,61 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    if (indexPath.row == 0) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+           [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    if (indexPath.row == 1) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+        
+    } else if (indexPath.row == 2) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];    }
+    else if (indexPath.row ==3) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else if (indexPath.row ==4) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else if (indexPath.row ==5) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else if (indexPath.row ==6) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }else
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    
+  //  [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
+    
+  //  [[self navigationController] popViewControllerAnimated:YES];
+    
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
