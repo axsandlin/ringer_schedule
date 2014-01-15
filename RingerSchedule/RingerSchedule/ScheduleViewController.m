@@ -57,8 +57,10 @@
 
 -(void)getDaysOfWeek:(DaysOfWeekViewController *)daysOfWeekViewController didSelectDaysOfWeek:(NSString *)daysOfWeekReturned; {
     
-    NSLog(@"getDaysOfWeek was called");
-
+    NSLog(@"The value of daysOfWeek is %@", daysOfWeekReturned);
+    DayofWeekCell *myCell = (DayofWeekCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
+    myCell.daysOfWeek.text = daysOfWeekReturned;
+    
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{

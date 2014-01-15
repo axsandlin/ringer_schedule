@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RepeatCell.h"
 #import "ScheduleNameCell.h"
+#import "DayofWeekCell.h"
 #import "RepeatViewController.h"
 #import "DaysOfWeekViewController.h"
 
