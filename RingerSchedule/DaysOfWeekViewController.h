@@ -29,6 +29,7 @@
 @property(nonatomic, assign) BOOL friday;
 @property(nonatomic, assign) BOOL saturday;
 @property(nonatomic, assign) BOOL sunday;
+@property (nonatomic, weak) NSString *daysOfWeek;
 
 
 

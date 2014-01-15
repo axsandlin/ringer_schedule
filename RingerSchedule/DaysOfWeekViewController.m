@@ -22,6 +22,7 @@
 @synthesize friday;
 @synthesize saturday;
 @synthesize sunday;
+@synthesize daysOfWeek;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,6 +51,39 @@
 }
 
 #pragma mark - Table view data source
+
+- (IBAction)tappedDone:(id)sender {
+    
+    NSString *dayString = @" ";
+    
+    if (monday) {
+        dayString = [dayString stringByAppendingString:@"M "];
+    }
+    if (tuesday) {
+        dayString = [dayString stringByAppendingString:@"Tu "];
+    }
+    if (wednesday){
+        dayString = [dayString stringByAppendingString:@"W "];
+    }
+    if (thursday) {
+        dayString = [dayString stringByAppendingString:@"Th "];
+    }
+    if (friday) {
+        dayString = [dayString stringByAppendingString:@"F "];
+    }
+    if (saturday) {
+        dayString = [dayString stringByAppendingString:@"Sa "];
+    }
+    if (sunday) {
+        dayString = [dayString stringByAppendingString:@"Su "];
+    }
+    
+    daysOfWeek = dayString;
+    
+    [self.delegate getDaysOfWeek:self didSelectDaysOfWeek:daysOfWeek];
+    [[self navigationController] popViewControllerAnimated:YES];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -108,49 +142,67 @@
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
             monday = YES;
-        }else
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
             monday = NO;
+        }
     }
     if (indexPath.row == 1) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
+            tuesday = YES;
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
-        
-    } else if (indexPath.row == 2) {
-        if (cell.accessoryType == UITableViewCellAccessoryNone) {
-            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
-            [cell setAccessoryType:UITableViewCellAccessoryNone];    }
-    else if (indexPath.row ==3) {
-        if (cell.accessoryType == UITableViewCellAccessoryNone) {
-            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
-            [cell setAccessoryType:UITableViewCellAccessoryNone];
+            tuesday = NO;
+        }
     }
-    else if (indexPath.row ==4) {
+    if (indexPath.row == 2) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
+            wednesday = YES;
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
+            wednesday = NO;
+        }
     }
-    else if (indexPath.row ==5) {
+    if (indexPath.row ==3) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
+            thursday = YES;
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
+            thursday = NO;
+        }
     }
-    else if (indexPath.row ==6) {
+    if (indexPath.row ==4) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
             [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }else
+            friday = YES;
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
             [cell setAccessoryType:UITableViewCellAccessoryNone];
+            friday = NO;
+        }
+    }
+    if (indexPath.row ==5) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+            saturday = YES;
+            
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+            saturday = NO;
+        }
+    }
+    if (indexPath.row ==6) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+            sunday = YES;
+        }else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+            sunday = NO;
+        }
     }
 
-    
-  //  [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
-        
 }
 
 
@@ -205,8 +257,5 @@
 
  */
 
-- (IBAction)tappedDone:(id)sender {
-    
-    [[self navigationController] popViewControllerAnimated:YES];
-}
 @end
+
