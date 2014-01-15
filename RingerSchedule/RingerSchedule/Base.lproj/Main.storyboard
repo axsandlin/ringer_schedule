@@ -340,7 +340,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCell" textLabel="VeI-lR-n31" style="IBUITableViewCellStyleDefault" id="D80-gk-cVN">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D80-gk-cVN" id="dr6-Ht-Yzu">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -362,10 +362,26 @@
                             <outlet property="delegate" destination="e9H-gv-eLY" id="uwY-hf-Imm"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem id="rPr-Ta-p6h"/>
+                        <barButtonItem id="LVS-di-hOT"/>
+                        <barButtonItem id="Nxz-Qc-Cwn"/>
+                        <barButtonItem id="Wmw-2J-64T"/>
+                        <barButtonItem id="Zxh-yv-vWk"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="cQ4-Y2-ivv">
+                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="done" id="fhk-PE-18m">
+                            <connections>
+                                <action selector="tappedDone:" destination="e9H-gv-eLY" id="Kva-M6-7bv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcz-MM-EPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1536" y="105"/>
+            <point key="canvasLocation" x="1892" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LaF-dX-94f">
@@ -384,6 +400,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ded-h6-B3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19" y="163"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vc1-OZ-1J9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="amj-aL-lSj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QJQ-bj-vtA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e9H-gv-eLY" kind="relationship" relationship="rootViewController" id="wZ8-9N-vT3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0N2-wG-BbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="113"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

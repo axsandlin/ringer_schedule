@@ -19,5 +19,6 @@
 @interface DaysOfWeekViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) id <DaysOfWeekViewControllerDelegate> delegate;
+- (IBAction)tappedDone:(id)sender;
 
 @end

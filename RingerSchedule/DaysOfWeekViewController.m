@@ -15,6 +15,13 @@
 @implementation DaysOfWeekViewController
 
 @synthesize delegate;
+@synthesize monday;
+@synthesize tuesday;
+@synthesize wednesday;
+@synthesize thursday;
+@synthesize friday;
+@synthesize saturday;
+@synthesize sunday;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -46,15 +53,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 7;
 }
 
@@ -104,8 +107,10 @@
     if (indexPath.row == 0) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+            monday = YES;
         }else
             [cell setAccessoryType:UITableViewCellAccessoryNone];
+            monday = NO;
     }
     if (indexPath.row == 1) {
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
@@ -142,11 +147,10 @@
         }else
             [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
+
     
   //  [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
-    
-  //  [[self navigationController] popViewControllerAnimated:YES];
-    
+        
 }
 
 
@@ -201,4 +205,8 @@
 
  */
 
+- (IBAction)tappedDone:(id)sender {
+    
+    [[self navigationController] popViewControllerAnimated:YES];
+}
 @end
