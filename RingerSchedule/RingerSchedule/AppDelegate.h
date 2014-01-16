@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Schedule.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

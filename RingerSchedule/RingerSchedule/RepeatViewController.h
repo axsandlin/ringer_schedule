@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+ 
+
+@class RepeatViewController;
+
+@protocol RepeatViewControllerDelegate <NSObject>
+
+-(void)getRepeatValue:(RepeatViewController *)repeatViewController didSelectRepeatValue:(NSString *)repeatValueReturned;
+
+@end
 
 @interface RepeatViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, weak) id <RepeatViewControllerDelegate> delegate;
+@property (nonatomic, weak) NSString *repeatValue;
+
 @end
+
+

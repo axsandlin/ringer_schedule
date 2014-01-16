@@ -14,6 +14,9 @@
 
 @implementation RepeatViewController
 
+@synthesize delegate;
+@synthesize repeatValue;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,7 +55,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,26 +63,58 @@
     
     NSString *displayValue;
     
-    if (indexPath.row == 0) {
-        displayValue = @"Every Day";
-        
-    } else if (indexPath.row == 1) {
-         displayValue = @"Every Week";
-    }
-    else if (indexPath.row ==2) {
-         displayValue = @"Every 2 Weeks";
-    }
-    else if (indexPath.row ==3) {
-         displayValue =@"Every Week Day";
-    }
-
     static NSString *CellIdentifier = @"RepeatCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.text = displayValue;
 
+    
+    if (indexPath.row == 0) {
+        displayValue = @"Never";
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }if (indexPath.row == 1) {
+        displayValue = @"Every Day";
+        
+    } else if (indexPath.row == 2) {
+         displayValue = @"Every Week";
+    }
+    else if (indexPath.row ==3) {
+        displayValue = @"Every 2 Weeks";
+    }
+    else if (indexPath.row ==4) {
+         displayValue =@"Every Week Day";
+    }
+
+    cell.textLabel.text = displayValue;
+    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+ //   UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+
+    
+    if (indexPath.row == 0) {
+        repeatValue = @"Never";
+    }
+    if (indexPath.row == 1) {
+        repeatValue = @"Every Day";
+        
+    } else if (indexPath.row == 2) {
+         repeatValue = @"Every Week";
+    }
+    else if (indexPath.row ==3) {
+         repeatValue = @"Every 2 Weeks";
+    }
+    else if (indexPath.row ==4) {
+         repeatValue =@"Every Week Day";
+    }
+    
+    [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
+
+    [[self navigationController] popViewControllerAnimated:YES];
+
 }
 
 /*
