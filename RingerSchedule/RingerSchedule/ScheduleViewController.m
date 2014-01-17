@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
 }    // Do any additional setup after loading the view.
@@ -120,11 +120,10 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-     return 13;
+     return 11;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
     if (indexPath.row == 0) {
         identifier = @"ScheduleName";
@@ -135,37 +134,33 @@
         identifier =@"StartTimeDisp";
     }
     else if (indexPath.row ==3) {
-        identifier =@"StartTimePicker";
-    }
-    else if (indexPath.row ==4) {
         identifier =@"EndTimeDisp";
     }
+    else if (indexPath.row ==4) {
+        identifier =@"Blank";
+    }
     else if (indexPath.row ==5) {
-        identifier =@"EndTimePicker";
+        identifier =@"Repeat";
     }
     else if (indexPath.row ==6) {
         identifier =@"Blank";
     }
     else if (indexPath.row ==7) {
-        identifier =@"Repeat";
+        identifier =@"DayOfWeek";
     }
     else if (indexPath.row ==8) {
         identifier =@"Blank";
     }
     else if (indexPath.row ==9) {
-        identifier =@"DayOfWeek";
-    }
-    else if (indexPath.row ==10) {
-        identifier =@"Blank";
-    }
-    else if (indexPath.row ==11) {
         identifier =@"RingerVolume";
     }
-    else if (indexPath.row ==12) {
+    else if (indexPath.row ==10) {
         identifier =@"Slider";
     }
+        
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
     
     return cell;
 }
