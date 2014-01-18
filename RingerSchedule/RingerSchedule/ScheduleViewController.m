@@ -167,7 +167,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row ==7) {
+    if (indexPath.row ==5) {
         
         RepeatViewController *repeatViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"repeat"];
         
@@ -175,7 +175,7 @@
         
         [[self navigationController] pushViewController:repeatViewController animated:YES];
     
-    }else if (indexPath.row == 9) {
+    }else if (indexPath.row == 7) {
         
         DaysOfWeekViewController *daysOfWeekViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"daysOfWeek"];
         

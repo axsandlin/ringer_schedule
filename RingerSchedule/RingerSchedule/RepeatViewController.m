@@ -55,7 +55,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,18 +72,12 @@
         displayValue = @"Never";
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }if (indexPath.row == 1) {
-        displayValue = @"Every Day";
+        displayValue = @"Every Week";
         
     } else if (indexPath.row == 2) {
-         displayValue = @"Every Week";
+         displayValue = @"Every 2 Weeks";
     }
-    else if (indexPath.row ==3) {
-        displayValue = @"Every 2 Weeks";
-    }
-    else if (indexPath.row ==4) {
-         displayValue =@"Every Week Day";
-    }
-
+    
     cell.textLabel.text = displayValue;
     
     return cell;
@@ -99,17 +93,12 @@
         repeatValue = @"Never";
     }
     if (indexPath.row == 1) {
-        repeatValue = @"Every Day";
+        repeatValue = @"Every Week";
         
     } else if (indexPath.row == 2) {
-         repeatValue = @"Every Week";
-    }
-    else if (indexPath.row ==3) {
          repeatValue = @"Every 2 Weeks";
     }
-    else if (indexPath.row ==4) {
-         repeatValue =@"Every Week Day";
-    }
+   
     
     [self.delegate getRepeatValue:self didSelectRepeatValue:repeatValue];
 
