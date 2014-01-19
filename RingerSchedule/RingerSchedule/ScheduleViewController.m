@@ -18,6 +18,8 @@
 @synthesize schedDataTableView;
 @synthesize identifier;
 @synthesize scheduleName;
+@synthesize startTimeString;
+@synthesize endTimeString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -111,8 +113,19 @@
 }
 
 - (IBAction)tappedDone:(id)sender {
+
+    //References the table cell by index path.
     
-    [[self navigationController] popViewControllerAnimated:YES];
+  TimeCell *myStartCell = (TimeCell *)[self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0]];
+   TimeCell *myEndCell = (TimeCell *)[self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0]];
+  
+    NSDateFormatter *startFormatter = [[NSDateFormatter alloc] init];
+  [startFormatter setDateFormat:@"HH:mm"]; //24hr time format
+    
+  startTimeString = [startFormatter stringFromDate:myStartCell.startTime.date];
+  endTimeString = [startFormatter stringFromDate:myEndCell.endTime.date];
+    
+  [[self navigationController] popViewControllerAnimated:YES];
 
 }
 
@@ -181,8 +194,8 @@
         
         daysOfWeekViewController.delegate = self;
         
-        [[self navigationController] pushViewController:daysOfWeekViewController animated:YES];    }
-    
+        [[self navigationController] pushViewController:daysOfWeekViewController animated:YES];
+    }
 }
 
 @end

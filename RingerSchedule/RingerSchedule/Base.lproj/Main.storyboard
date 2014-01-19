@@ -112,7 +112,7 @@
                                             <outlet property="txtScheduleName" destination="Isy-qc-kzA" id="91a-Ot-9Ub"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StartTimeDisp" id="eba-Do-6XM">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StartTimeDisp" id="eba-Do-6XM" customClass="TimeCell">
                                         <rect key="frame" x="0.0" y="66" width="316" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eba-Do-6XM" id="ovL-PM-n7R">
@@ -161,8 +161,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="startTime" destination="G6d-X7-CaP" id="qA8-Hd-7UB"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EndTimeDisp" id="pqU-hk-YIS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EndTimeDisp" id="pqU-hk-YIS" customClass="TimeCell">
                                         <rect key="frame" x="0.0" y="110" width="316" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pqU-hk-YIS" id="20e-fe-div">
@@ -212,6 +215,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endTime" destination="9y4-rA-65X" id="a7u-1C-boJ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Repeat" id="zgq-UA-HOU" customClass="RepeatCell">
                                         <rect key="frame" x="0.0" y="154" width="316" height="44"/>

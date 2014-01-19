@@ -22,6 +22,7 @@
 		1A0F673F18296068002286CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A0F673D18296068002286CE /* InfoPlist.strings */; };
 		1A0F674118296068002286CE /* RingerScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F674018296068002286CE /* RingerScheduleTests.m */; };
 		1AFFECC61829635500F8D877 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFFECC51829635500F8D877 /* ScheduleViewController.m */; };
+		F363522D188B4986006404F1 /* TimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F363522C188B4986006404F1 /* TimeCell.m */; };
 		F38DEDD41885BEEB00E3DC82 /* DaysOfWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38DEDD31885BEEB00E3DC82 /* DaysOfWeekViewController.m */; };
 		F3AEFBA418764A5600199541 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFBA318764A5600199541 /* RepeatViewController.m */; };
 		F3AEFBA718774E8600199541 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AEFBA618774E8600199541 /* Schedule.m */; };
@@ -62,6 +63,8 @@
 		1A0F674018296068002286CE /* RingerScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RingerScheduleTests.m; sourceTree = "<group>"; };
 		1AFFECC41829635500F8D877 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		1AFFECC51829635500F8D877 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		F363522B188B4986006404F1 /* TimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCell.h; sourceTree = "<group>"; };
+		F363522C188B4986006404F1 /* TimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCell.m; sourceTree = "<group>"; };
 		F38DEDD21885BEEB00E3DC82 /* DaysOfWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DaysOfWeekViewController.h; path = ../DaysOfWeekViewController.h; sourceTree = "<group>"; };
 		F38DEDD31885BEEB00E3DC82 /* DaysOfWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DaysOfWeekViewController.m; path = ../DaysOfWeekViewController.m; sourceTree = "<group>"; };
 		F3AEFBA218764A5600199541 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				1A0F672418296068002286CE /* AppDelegate.h */,
 				1A0F672518296068002286CE /* AppDelegate.m */,
 				1A0F672718296068002286CE /* Main.storyboard */,
+				F363522B188B4986006404F1 /* TimeCell.h */,
+				F363522C188B4986006404F1 /* TimeCell.m */,
 				F3E0D3AA1885B29A0006546F /* DayofWeekCell.h */,
 				F3E0D3AB1885B29A0006546F /* DayofWeekCell.m */,
 				F3E0D3A7188072D20006546F /* ScheduleNameCell.h */,
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38DEDD41885BEEB00E3DC82 /* DaysOfWeekViewController.m in Sources */,
+				F363522D188B4986006404F1 /* TimeCell.m in Sources */,
 				F3AEFBA718774E8600199541 /* Schedule.m in Sources */,
 				F3E0D3AC1885B29A0006546F /* DayofWeekCell.m in Sources */,
 				1A0F672C18296068002286CE /* ViewController.m in Sources */,
