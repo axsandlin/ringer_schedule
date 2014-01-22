@@ -11,6 +11,7 @@
 #import "ScheduleNameCell.h"
 #import "DayofWeekCell.h"
 #import "TimeCell.h"
+#import "RingerSelectionCell.h"
 #import "RepeatViewController.h"
 #import "DaysOfWeekViewController.h"
 
@@ -27,6 +28,8 @@
 @property (nonatomic, weak) NSString *scheduleName;
 @property (nonatomic, weak) NSString *startTimeString;
 @property (nonatomic, weak) NSString *endTimeString;
+@property(nonatomic, assign) int segmentValue;
+
 
 @property (weak, nonatomic) IBOutlet UITableView *schedDataTableView;
 

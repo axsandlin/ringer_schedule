@@ -20,6 +20,7 @@
 @synthesize scheduleName;
 @synthesize startTimeString;
 @synthesize endTimeString;
+@synthesize segmentValue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -114,16 +115,26 @@
 
 - (IBAction)tappedDone:(id)sender {
 
-    //References the table cell by index path.
+    //References the table cells by index path.
     
   TimeCell *myStartCell = (TimeCell *)[self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:2 inSection:0]];
-   TimeCell *myEndCell = (TimeCell *)[self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0]];
+  TimeCell *myEndCell = (TimeCell *)[self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:3 inSection:0]];
   
-    NSDateFormatter *startFormatter = [[NSDateFormatter alloc] init];
+    RingerSelectionCell *myRingerCell = (RingerSelectionCell *) [self.schedDataTableView cellForRowAtIndexPath: [NSIndexPath indexPathForRow:10 inSection:0]];
+  
+   NSDateFormatter *startFormatter = [[NSDateFormatter alloc] init];
   [startFormatter setDateFormat:@"HH:mm"]; //24hr time format
     
   startTimeString = [startFormatter stringFromDate:myStartCell.startTime.date];
   endTimeString = [startFormatter stringFromDate:myEndCell.endTime.date];
+    
+    if (myRingerCell.ringerSelection.selectedSegmentIndex == 0) {
+        segmentValue = 0;
+    }else if (myRingerCell.ringerSelection.selectedSegmentIndex ==1) {
+        segmentValue = 1;
+    }else if (myRingerCell.ringerSelection.selectedSegmentIndex ==2) {
+        segmentValue =2;
+    }
     
   [[self navigationController] popViewControllerAnimated:YES];
 
@@ -165,10 +176,10 @@
         identifier =@"Blank";
     }
     else if (indexPath.row ==9) {
-        identifier =@"RingerVolume";
+        identifier =@"RingerVolumeLabel";
     }
     else if (indexPath.row ==10) {
-        identifier =@"Slider";
+        identifier =@"RingerSelection";
     }
         
     
