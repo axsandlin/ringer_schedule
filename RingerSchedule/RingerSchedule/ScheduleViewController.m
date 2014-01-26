@@ -21,6 +21,8 @@
 @synthesize startTimeString;
 @synthesize endTimeString;
 @synthesize segmentValue;
+@synthesize repeatValueForward;
+@synthesize dayOfWeekForward;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    repeatValueForward = @"Never";
     
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
@@ -55,6 +59,7 @@
     //I cast the selected cell into my custom cell in order to access the label property/outlet and update the label.
     
     RepeatCell *myCell = (RepeatCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
+    repeatValueForward = repeatValueReturned;
     myCell.repeatLabel.text = repeatValueReturned;
 }
 
@@ -62,6 +67,7 @@
     
     NSLog(@"The value of daysOfWeek is %@", daysOfWeekReturned);
     DayofWeekCell *myCell = (DayofWeekCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
+    dayOfWeekForward = daysOfWeekReturned;
     myCell.daysOfWeek.text = daysOfWeekReturned;
     
 }
@@ -197,6 +203,8 @@
         
         repeatViewController.delegate = self;
         
+        repeatViewController.repeatValue = repeatValueForward;
+        
         [[self navigationController] pushViewController:repeatViewController animated:YES];
     
     }else if (indexPath.row == 7) {
@@ -204,6 +212,8 @@
         DaysOfWeekViewController *daysOfWeekViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"daysOfWeek"];
         
         daysOfWeekViewController.delegate = self;
+        
+   //    daysOfWeekViewController.daySelected = dayOfWeekForward;
         
         [[self navigationController] pushViewController:daysOfWeekViewController animated:YES];
     }

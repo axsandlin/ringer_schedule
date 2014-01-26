@@ -28,6 +28,8 @@
 @property (nonatomic, weak) NSString *scheduleName;
 @property (nonatomic, weak) NSString *startTimeString;
 @property (nonatomic, weak) NSString *endTimeString;
+@property (nonatomic, weak) NSString *repeatValueForward;
+@property (nonatomic, weak) NSString *dayOfWeekForward;
 @property(nonatomic, assign) int segmentValue;
 
 

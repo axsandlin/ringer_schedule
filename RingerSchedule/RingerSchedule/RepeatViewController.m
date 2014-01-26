@@ -70,14 +70,23 @@
     
     if (indexPath.row == 0) {
         displayValue = @"Never";
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-    }if (indexPath.row == 1) {
+    }
+    if (indexPath.row == 1) {
         displayValue = @"Every Week";
-        
-    } else if (indexPath.row == 2) {
-         displayValue = @"Every 2 Weeks";
+    }
+    if (indexPath.row == 2) {
+        displayValue = @"Every 2 Weeks";
     }
     
+    if (indexPath.row == 0 && [repeatValue  isEqual: @"Never"]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
+    if (indexPath.row == 1 && [repeatValue  isEqual: @"Every Week"]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
+    if (indexPath.row == 2 && [repeatValue  isEqual: @"Every 2 Weeks"]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
     cell.textLabel.text = displayValue;
     
     return cell;
