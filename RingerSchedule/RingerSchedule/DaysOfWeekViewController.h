@@ -16,9 +16,18 @@
 
 @end
 
-@interface DaysOfWeekViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DaysOfWeekViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) id <DaysOfWeekViewControllerDelegate> delegate;
+@property(nonatomic, assign) BOOL monday;
+@property(nonatomic, assign) BOOL tuesday;
+@property(nonatomic, assign) BOOL wednesday;
+@property(nonatomic, assign) BOOL thursday;
+@property(nonatomic, assign) BOOL friday;
+@property(nonatomic, assign) BOOL saturday;
+@property(nonatomic, assign) BOOL sunday;
+@property (nonatomic, weak) NSString *daySelected;
+
 - (IBAction)tappedDone:(id)sender;
 
 @end

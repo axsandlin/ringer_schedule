@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="91"/>
+            <point key="canvasLocation" x="859" y="-489"/>
         </scene>
         <!--Schedule View Controller -  -->
         <scene sceneID="EsU-6D-xsA">
@@ -343,7 +343,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKm-Q4-FL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="97"/>
+            <point key="canvasLocation" x="1485" y="-447"/>
         </scene>
         <!--Repeat View Controller-->
         <scene sceneID="MRk-6y-EdF">
@@ -381,7 +381,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJs-jg-TrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="105"/>
+            <point key="canvasLocation" x="1953" y="-677"/>
         </scene>
         <!--Days Of Week View Controller-->
         <scene sceneID="joS-0V-Yce">
@@ -434,7 +434,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcz-MM-EPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="113"/>
+            <point key="canvasLocation" x="1959" y="29"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LaF-dX-94f">
@@ -452,25 +452,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ded-h6-B3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="163"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vc1-OZ-1J9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="amj-aL-lSj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QJQ-bj-vtA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="e9H-gv-eLY" kind="relationship" relationship="rootViewController" id="wZ8-9N-vT3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0N2-wG-BbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1554" y="113"/>
+            <point key="canvasLocation" x="295" y="-517"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

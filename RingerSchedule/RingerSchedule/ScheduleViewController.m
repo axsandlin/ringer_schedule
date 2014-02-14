@@ -9,6 +9,7 @@
 #import "ScheduleViewController.h"
 #import "Schedule.h"
 
+
 @interface ScheduleViewController ()
 
 @end
@@ -38,6 +39,7 @@
     [super viewDidLoad];
     
     repeatValueForward = @"Never";
+  
     
  //   [_mySlider setThumbImage: [UIImage imageNamed:@"audio_volume_high.png"] forState:UIControlStateNormal];
     
@@ -64,12 +66,10 @@
 }
 
 -(void)getDaysOfWeek:(DaysOfWeekViewController *)daysOfWeekViewController didSelectDaysOfWeek:(NSString *)daysOfWeekReturned; {
-    
-    NSLog(@"The value of daysOfWeek is %@", daysOfWeekReturned);
+    NSLog(@"The value of daysOfWeekReturned is %@", daysOfWeekReturned);
     DayofWeekCell *myCell = (DayofWeekCell *)[self.schedDataTableView cellForRowAtIndexPath:schedDataTableView.indexPathForSelectedRow];
-    dayOfWeekForward = daysOfWeekReturned;
     myCell.daysOfWeek.text = daysOfWeekReturned;
-    
+    dayOfWeekForward = myCell.daysOfWeek.text;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -209,11 +209,12 @@
     
     }else if (indexPath.row == 7) {
         
-        DaysOfWeekViewController *daysOfWeekViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"daysOfWeek"];
+        DaysOfWeekViewController *daysOfWeekViewController = [self.storyboard
+        instantiateViewControllerWithIdentifier:@"daysOfWeek"];
         
         daysOfWeekViewController.delegate = self;
         
-   //    daysOfWeekViewController.daySelected = dayOfWeekForward;
+        daysOfWeekViewController.daySelected = dayOfWeekForward;
         
         [[self navigationController] pushViewController:daysOfWeekViewController animated:YES];
     }

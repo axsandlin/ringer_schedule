@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     
+        NSLog(@"The value of daySelected is %@", repeatValue);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
