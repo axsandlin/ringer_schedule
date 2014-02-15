@@ -130,11 +130,76 @@
     else if (indexPath.row ==6) {
         displayValue =@"Sunday";
     }
-
-    cell.textLabel.text = displayValue;
-
     
-    return cell;
+    if (daySelected != nil) {
+    
+        if (indexPath.row == 0) {
+            if ([daySelected rangeOfString:@"M"].location == NSNotFound){
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else {
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                monday = YES;
+            }
+        }
+        if (indexPath.row == 1) {
+            if ([daySelected rangeOfString:@"Tu"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else {
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                tuesday = YES;
+            }
+        }
+        if (indexPath.row == 2) {
+            if ([daySelected rangeOfString:@"W"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else{
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                wednesday = YES;
+            }
+        }
+        if (indexPath.row == 3) {
+            if ([daySelected rangeOfString:@"Th"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else{
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                thursday = YES;
+            }
+        }
+        if (indexPath.row == 4) {
+            if ([daySelected rangeOfString:@"F"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else{
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                friday = YES;
+            }
+        }
+        if (indexPath.row == 5) {
+            if ([daySelected rangeOfString:@"Sa"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else{
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                saturday = YES;
+            }
+        }
+        if (indexPath.row == 6) {
+            if ([daySelected rangeOfString:@"Su"].location == NSNotFound) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }
+            else{
+                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+                sunday = YES;
+            }
+        }
+    }
+        cell.textLabel.text = displayValue;
+    
+        return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
